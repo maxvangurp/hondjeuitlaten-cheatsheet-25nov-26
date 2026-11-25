@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Cheatsheet Hondjeuitlaten</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root { --navy:#14123a; --paars:#6b3df5; --magenta:#d6359b; --tekst:#22213a; --grijs:#6d6b85; --lijn:#e6e3f3; --vlak:#f6f4fd; }
+  @page { size: A4; margin: 14mm 14mm 14mm 14mm; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:#fff; color:var(--tekst); font-family:'Plus Jakarta Sans',system-ui,sans-serif; font-size:10.5pt; line-height:1.45; }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 24px 16px; }
+  header { background: linear-gradient(120deg, var(--paars), var(--magenta)); color:#fff; border-radius:14px; padding:18px 22px; margin-bottom:14px; }
+  header h1 { margin:0; font-size:20pt; font-weight:800; letter-spacing:-.01em; }
+  header p { margin:4px 0 0; opacity:.92; font-size:10pt; }
+  a.pdf { display:inline-block; margin-top:8px; color:#fff; font-weight:600; font-size:9.5pt; }
+  section { border:1px solid var(--lijn); border-radius:12px; padding:12px 16px; margin-bottom:10px; break-inside: avoid; }
+  section.belangrijk { background: var(--vlak); border-color:#d7cff8; }
+  h2 { margin:0 0 6px; font-size:12pt; font-weight:800; color:var(--navy); }
+  h2 .nr { color:var(--magenta); margin-right:6px; }
+  ul, ol { margin:0; padding-left:18px; }
+  li { margin:2px 0; }
+  li ul { margin-top:2px; }
+  .cijfers { display:grid; grid-template-columns: repeat(3, 1fr); gap:8px; margin:6px 0 8px; }
+  .tegel { background:#fff; border:1px solid var(--lijn); border-radius:10px; padding:8px 10px; }
+  .tegel .lbl { font-size:8.5pt; color:var(--grijs); }
+  .tegel .w { font-size:14pt; font-weight:800; color:var(--navy); }
+  .tegel .s { font-size:8.5pt; }
+  .rood { color:#c62a3a; } .groen { color:#1f8a4c; }
+  .privé { border-color:#f1c9de; }
+  .privé h2 { color:var(--magenta); }
+  footer { color:var(--grijs); font-size:8.5pt; margin-top:6px; }
+  @media (max-width:600px){ .cijfers{ grid-template-columns:1fr; } }
+  @media print { .wrap{ padding:0; max-width:none; } a.pdf{ display:none; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>Cheatsheet Hondjeuitlaten</h1>
+  <p>Meeting server-side tracking · woensdag 25 november, 13:00 via Meet · Rick, Lars, Daphne, Berry en Bart</p>
+  <a class="pdf" href="cheatsheet-hondjeuitlaten-25nov.pdf">Download als PDF</a>
+</header>
+
+<section>
+  <h2><span class="nr">1</span>Wat je al gedaan hebt</h2>
+  <ul>
+    <li><b>Juli:</b> server-side meting opgezet via TAGGRS. De Google Ads-conversies lopen via de server en Meta CAPI staat aan.</li>
+    <li><b>12 nov:</b> alles nagemeten en vier dingen gerepareerd:
+      <ul>
+        <li>de aankoopwaarde en valuta gaan mee naar Google Ads en Meta;</li>
+        <li>het abonnement gaat mee naar Meta;</li>
+        <li>klantgegevens gaan versleuteld via de server naar Google en Meta, zodat meer aankopen aan een advertentie gekoppeld worden;</li>
+        <li>Google Ads telt ook mee als niet alle cookies geaccepteerd zijn.</li>
+      </ul>
+    </li>
+    <li><b>12 nov, mail aan Lars:</b> advies om één aankoopconversie als hoofddoel te nemen, met het verschil tussen de abonnementen als waarde.</li>
+    <li><b>19 nov:</b> aparte GA4-gebeurtenis voor het nieuwe lidmaatschap (item 32). Rick heeft het lidmaatschap daarna live gezet.</li>
+  </ul>
+</section>
+
+<section class="belangrijk">
+  <h2><span class="nr">2</span>Hoe het nu staat</h2>
+  <div class="cijfers">
+    <div class="tegel"><div class="lbl">Nieuw lidmaatschap sinds 19 nov</div><div class="w">50 verkocht</div><div class="s">€14,95 p/m, maandelijks opzegbaar</div></div>
+    <div class="tegel"><div class="lbl">Aankopen, 19-24 nov vs 6 dagen ervoor</div><div class="w">62 <span class="s">vs 107</span></div><div class="s rood">ongeveer 40% minder</div></div>
+    <div class="tegel"><div class="lbl">Omzet GA4, zelfde periodes</div><div class="w">€681 <span class="s">vs €622</span></div><div class="s groen">ongeveer 10% meer</div></div>
+  </div>
+  <ul>
+    <li><b>Minder aankopen, maar meer waard.</b> Dit is het belangrijkste gespreksonderwerp.</li>
+    <li><b>Aanmeldingen gelijk:</b> 147 baasjes en 202 vrijwilligers, tegen 157 en 197 in de 6 dagen ervoor.</li>
+    <li><b>De waarde komt aan in Google Ads:</b> gemiddeld €7-12 per aankoop, waar dat eerst €1 was.</li>
+  </ul>
+</section>
+
+<section>
+  <h2><span class="nr">3</span>Wat je ze wilt laten beslissen</h2>
+  <ol>
+    <li><b>Wat is elk abonnement waard?</b> Denk aan de opbrengst over de looptijd. Bij maandelijks opzegbaar: hoe lang blijft iemand gemiddeld lid? Daarna kunnen de campagnes op waarde bieden (nu Conversies maximaliseren).</li>
+    <li><b>Na de testweek</b> (loopt ongeveer tot morgen): blijft het nieuwe lidmaatschap naast de oude abonnementen, of komt het ervoor in de plaats?</li>
+    <li><b>Key events in GA4 opschonen.</b> Nu 24, en een aankoop telt dubbel (purchase én NL_Baasje_*). Voorstel: drie overhouden, purchase, sign_up_baasje en sign_up_vrijwilliger. Raakt hun eigen rapporten, dus hun keuze.</li>
+    <li><b>Meta:</b> hun UTM's komen goed binnen. Samen de matchkwaliteit in Events Manager bekijken; die zou door de klantgegevens moeten stijgen.</li>
+  </ol>
+</section>
+
+<section>
+  <h2><span class="nr">4</span>Vragen voor Rick</h2>
+  <ul>
+    <li>Kunnen de doorverwijzingen /zoeken/vrijwilligers en /zoeken/baasjes de UTM's en de gclid meenemen? Nu vallen die weg.</li>
+    <li>Een dataLayer-event op het moment van aanmelden, met de rol erbij (baasje of vrijwilliger)? Nu hangt het aan de bedankpagina.</li>
+    <li>Prijs en <code>currency: 'EUR'</code> meesturen in de items van de purchase?</li>
+    <li>Testomgeving v4-hondjeuitlaten.test van de Meta-pixel af?</li>
+    <li>Het Enhanced Tracking Script van TAGGRS aanzetten (volgens TAGGRS ongeveer 14% meer data)?</li>
+  </ul>
+</section>
+
+<section class="privé">
+  <h2><span class="nr">5</span>Zelf weten, niet zelf aankaarten</h2>
+  <ul>
+    <li><b>Fix wacht op jouw akkoord:</b> advertentie 679849798017 (01.02 Baasjes) linkt nog naar /zoeken/vrijwilligers; die stuurt door en de gclid valt weg. Script staat klaar (<code>--bevestig</code>).</li>
+    <li><b>"NL - Display - Remarketing" staat aan.</b> €0 in 30 dagen, maar raakt je regel "geen Display". Niet jouw campagne: laten staan of pauzeren is jouw beslissing.</li>
+    <li><b>De GA4-gebeurtenis van 19 nov telt dubbel:</b> 82 keer bij 50 verkopen. Geen key event, dus Google Ads merkt er niets van. Wordt uitgezocht na de meeting.</li>
+    <li><b>Waarde per aankoop in GA4 is laag:</b> gemiddeld €5-6 voor de oude abonnementen. Waarschijnlijk de eerste betaling zonder btw, niet de looptijd. Precies waarom beslispunt 1 nodig is.</li>
+  </ul>
+</section>
+
+<footer>Intern · Aizy · bronnen: GA4 346224396, Google Ads 8546812235, trackingkaart 12 nov · stand 25 nov 2026</footer>
+</div>
+</body>
+</html>
